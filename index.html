@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "LeagueGothic";
+            src: url("assets/LeagueGothic.woff2") format("woff2");
+        }
+
+        @font-face {
+            font-family: "YekanBakhFaNum";
+            src: url("assets/YekanBakhFaNum-Regular.woff2") format("woff2");
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "YekanBakhFaNum";
+            src: url("assets/YekanBakhFaNum-Fat.woff2") format("woff2");
+            font-weight: 1000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body,
+        html {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #ececec;
+        }
+
+        main {
+
+            background-color: #ececec;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #c5c3a8
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #22272c
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000
+        }
+
+        ::-moz-selection {
+            color: #fff;
+            background: #15181b
+        }
+
+        ::selection {
+            color: #fff;
+            background: #15181b
+        }
+
+        ::-moz-selection {
+            color: rgb(0, 0, 0);
+            background: rgb(177, 138, 70);
+        }
+
+        ::selection {
+            color: rgb(0, 0, 0);
+            background: rgb(177, 138, 70);
+        }
+    </style>
+    <link rel="stylesheet" href="sectionHero.css" />
+    <link rel="stylesheet" href="sectionDownload.css" />
+    <link rel="stylesheet" href="sectionConfig.css" />
+    <link rel="stylesheet" href="sectionStructure.css">
+</head>
+
+<body>
+    <div id="smooth-wrapper">
+        <main id="smooth-content">
+            <section class="sectionHero">
+                <div class="navbarHolder">
+                    <p id="ButtonAboutSection">درباره</p>
+                    <p id="ButtonStructureSection">آموزش</p>
+                    <p id="ButtonConfigSection">دریافت کانفیگ</p>
+                    <p id="ButtonDownloadSection">دانلود نرم‌افزار</p>
+                </div>
+                <div class="TitleHolder">
+                    <div id="hereTitleTop">
+                        <div>
+                            <div id="heroText">free</div>
+                            <div></div>
+                        </div>
+                        <div>v2ray</div>
+                    </div>
+                    <div>collector</div>
+                </div>
+                <div class="imageHolder">
+                    <div id="github">
+                        <p>github project</p>
+                    </div>
+                    <div id="IBOX">
+                        <p>IBOX (Owner)</p>
+                    </div>
+                    <img src="assets/cute_robotic_cat-6.png" alt="" />
+                </div>
+            </section>
+            <section class="sectionDownload" id="sectionDownload">
+                <p>download v2ray</p>
+                <div class="MainButtonHolder">
+                    <div>
+                        <button onclick="DownloadV2ray('windows')">windows</button>
+                        <button onclick="DownloadV2ray('android')">android</button>
+                        <button onclick="DownloadV2ray('ios')">ios</button>
+                        <button onclick="DownloadV2ray('MacOS')">MacOS</button>
+                        <button onclick="DownloadV2ray('linux')">linux</button>
+                    </div>
+                    <div class="secondaryButton"></div>
+                </div>
+            </section>
+            <section class="sectionConfig">
+                <p>دریافت کانفیگ</p>
+                <div class="mainContainer">
+                    <div class="buttonC">
+                        <button onclick="ConfigLink('mix')">mix</button>
+                        <button onclick="ConfigLink('reality')">reality</button>
+                        <button onclick="ConfigLink('vless')">vless</button>
+                        <button onclick="ConfigLink('vmess')">vmess</button>
+                        <button onclick="ConfigLink('shadowsocks')">shadowsocks</button>
+                        <button onclick="ConfigLink('trojan')">trojan</button>
+                    </div>
+                    <div class="linkC">
+                        <div id="topSection">
+                            <p onclick="copyLink(this)">copy</p>
+                            <p onclick="fetchLink(this)">fetch link</p>
+                        </div>
+                        <div id="bottomSection"></div>
+                        <div style="opacity: 0;" id="TextInput"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="sectionStructure">
+                <div class="header">
+                    <p>آموزش</p>
+                    <div>
+                        <p>(بزودی) ایفون</p>
+                        <a id="ButtonWindows">
+                            <p>ویندوز</p>
+                        </a>
+                        <a id="ButtonAndroid">
+                            <p>اندروید</p>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                <div id="android" class="android">
+                    <p>اندروید</p>
+                    <div>
+                        <p>مرحله 1: بعد از نصب اخرین نسخه اپلیکیشن از پلی استور، از بخش دریافت کانفیگ همین سایت، لینک
+                            دریافت
+                            کنید و وارد اپلیکیشن شوید، بعد از ورود به اپلیکیشن از گزینه های تولبار (بخش بالای صفحه) روی
+                            گزینه‌ی
+                            پلاس (تصویر به‌علاوه) کلیک کنید، سپس روی گزینه import config from Clipboard کلیک کنید، اگر
+                            لینک
+                            را
+                            به درستی کپی کرده باشید در پایین صفحه برای شما متن success نمایش داده میشود، در صورت تکمیل
+                            این
+                            بخش
+                            حالا لینک برای شما سابسکرایب شده. (نیاز به انجام دوباره این مرحله نیست، لینک به صورت خودکار
+                            هر
+                            ساعت
+                            بروز می‌شود)
+                            <br>
+                            <br>
+                            مرحله 2: برای دریافت و یا اپدیت کانفیگ ها در صفحه اصلی اپلیکیشن از گزینه های تولبار روی
+                            ایکون
+                            سه‌نقطه‌ای کلیک کنید، سپس گزینه اخر لیست با نام Update subscription را کلیک کنید، کانفیگ ها
+                            بر
+                            اساس
+                            سرعت اینترنت شما بین 5-30 ثانیه برای شما نمایش داده می‌شوند.
+
+                            <br>
+                            <br>
+                            پ.ن: در صورت نمایش داده نشدن کانفیگ، یا اینترنت شما قطع است، یا وی پی ان دیگری روشن دارید،
+                            یا
+                            روی
+                            پروتکل (لینک) که دریافت کرده‌اید کانفیگ فعالی وجود ندارد، لینک پروتکل های دیگر را دریافت
+                            کنید و
+                            از
+                            مرحله یک دوباره مسیر را تکرار کنید.
+
+                            <br>
+                            <br>
+                            مرحله 3: در صورت بدون مشکل بودن مرحله‌ی 2 و نمایش لیست کانفیگ ها، با چالش پیدا کردن بهترین
+                            کانفیگ
+                            روبه‌رو می‌شید، حالا از بخش بالایی صفحه روی سه‌نقطه کلیک کنید و از لیست باز شده گزینه Real
+                            delay
+                            all
+                            configuration انتخاب کنید، چند دقیقه صبر کنید تا اپلیکیشن سرعت واقعی همه‌ی کانفیگ هارا برسی
+                            کند
+                            (با
+                            قرمز و سبز شدن متن بالای هر کانفیگ متوجه می‌شوید)، بعد از اتمام برسی باری دیگر روی سه‌نقطه
+                            کلیک
+                            کنید
+                            و از لیست باز شده Sorting by test results را بزنید (این گزینه کانفیگ هارا بر اساس سرعت از
+                            بالا
+                            به
+                            پایین مرتب می‌کند و در این صورت بالا ترین کانفیگ ها در لیست قوی ترین ها هستند)، البته احتمال
+                            دارد
+                            تعدادی به صورت اشتباه نمایش داده شده باشند یا در مدت کوتاه از کار بی‌افتند، چرخه مرحله 3 را
+                            تکرار
+                            کنید و تا به کانفیگ بدون قطعی برسید.
+                        </p>
+                        <img src="assets/IconPlaystore.png" alt="">
+                        <p id="ButtonDownloadSection">Download Android v2ray</p>
+                    </div>
+                </div>
+                <div id="windows" class="windows">
+                    <p>ویندوز</p>
+                    <div>
+                        <p>استفاده از ورژن ویندوز سخت‌تر از ورژن های دیگست!
+                            <br>
+                            <br>
+                            مرحله 1: بعد از باز کردن لینک دانلودِ قرار داده شده، از بین فایل های قابل دانلود v2rayN.zip
+                            را
+                            دانلود کنید و سپس در پوشه دانلود از زیپ خارج کنید.
+                            <br>
+                            <br>
+                            پ.ن: نرم‌افزار بعد از خروج از زیپ نیاز به نصب ندارد، بعد از خروج از زیب هر بار برای استفاده
+                            از
+                            اپلیکیشن فایل v2rayN.exe را باز کنید، بعد از کلیک روی v2rayN.exe اپلیکیشن مینیمایز می‌شود و
+                            شما
+                            می‌توانید ان را در سمت راست تسکبار در فرمت یک ایکون کوچک ببینید.
+                            <br>
+                            <br>
+                            مرحله 2: احتمال بالا زبان اصلی برنامه نامفهوم (چینی) تنظیم شده، برای تغییر آن بعد از باز
+                            کردن
+                            اپلیکیشن و انتخاب ان از تسکبار ، روی ایکون سه‌نقطه در تولبار کلیک کنید و از لیست باز شده
+                            اخرین
+                            گزینه
+                            را به en تغییر دهید، سپس اپلیکیشن را کاملا ببندید و دوباره باز کنید.
+
+                            <br>
+                            <br>
+                            مرحله 3: از بخش دریافت کانفیگِ همین سایت، لینک دریافت کنید و وارد اپلیکیشن بشید، از گزینه
+                            های
+                            بالای
+                            نرم‌افزار Subscription group را انتخاب کنید و سپس از لیست باز شده Subscription group setting
+                            را
+                            انتخاب کنید، در صفحه باز شده روی گزینه Add کلیک کنید و یک Remarks دلخواه در جای خالی قرار
+                            دهید،
+                            در
+                            بخش Url(Optional) لینکی که از سایت دریافت کرده‌اید را قرار دهید و سپس confirm را بزنید و به
+                            صفحه
+                            اصلی برگردید.
+
+                            <br>
+                            <br>
+                            مرحله 4: برای دریافت کانفیگ ها در منوی بالایی نرم‌افزار Subscription group را انتخاب کنید و
+                            از
+                            لیست
+                            باز شده، Update Subscription group without proxy را انتخاب کنید، چند ثانیه صبر کنید تا لیست
+                            کانفیگ
+                            ها دریافت شود.
+
+                            <br>
+                            <br>
+                            پ.ن: در صورت نمایش داده نشدن کانفیگ، یا اینترنت شما قطع است، یا وی پی ان دیگری روشن دارید،
+                            یا
+                            ویندوز
+                            دیفندر شما بخشی از کد نرم‌افزار را بلاک کرده، یا روی پروتکل (لینک) که دریافت کرده‌اید کانفیگ
+                            فعالی
+                            وجود ندارد، لینک پروتکل های دیگر را دریافت کنید و از مرحله دو دوباره مسیر را تکرار کنید،
+                            البته
+                            در
+                            ویندوز مشکلات بسیار عمدست و در اینجا جا نمی‌گیره، اگر در لاگ اپلیکیشن ارور دریافت می‌کنید در
+                            گوگل به
+                            دنبال راه حل مشکل بگردید.
+
+                            <br>
+                            <br>
+                            مرحله 5: برای تست سرعت کانفیگ های باید ابتدا وارد این لینک شوید، سپس از بین اخرین نسخه ریلیز
+                            شده
+                            Xray-windows-64.zip را دانلود کنید، بعد از دانلود از زیپ خارج کنید، حالا وارد پوشه های نرم
+                            افزار
+                            v2rayN شوید در پوشه bin سپس پوشه Xray محتوایی مربوط که دانلود کردید را پیست کنید.
+
+                            <br>
+                            <br>
+                            مرحله 6: اگر مرحله 5 را به درستی انجام داده باشید می‌توانید وارد اپلیکیشن شوید و در لیست
+                            کانفیگ
+                            ها
+                            همه را انتخاب کنید، بعد از انتخاب روی آن راست کلیک کنید و از لیست باز شده گزینه Test server
+                            real
+                            delay را بزنید، بعد از چند ثانیه سرعت کانفیگ ها در راست لیست نمایش داده میشود (شاید نیاز
+                            باشد به
+                            راست اسکرول کنید)، روی پایین ترین پینگ کلیک کنید و اینتر بزنید. (پایین ترین عدد سریع ترین
+                            کانفیگ
+                            است)
+                            <br>
+                            <br>
+                            مرحله 7(خاموش و روشن کردن): از سمت راست تسک بار ویندوز روی اپکون اپلیکیشن راست کلیک کنید و
+                            از
+                            لیست
+                            باز شده، set system proxy را انتخاب کنید، برای خاموش کردن هم یا اپلیکیشن را کامل ببندید یا
+                            دوباره در
+                            لیست clear system proxy را انتخاب کنید.
+
+                            <br>
+                            <br>
+                            پ.ن: احتمال دارد تعدادی کانفیگ به صورت اشتباه نمایش داده شده باشند یا در مدت کوتاه از کار
+                            بی‌افتند،
+                            چرخه مرحله 6 را تکرار کنید و تا به کانفیگ بدون قطعی برسید.
+                        </p>
+                        <img src="assets/IconWindows.png" alt="">
+                        <p id="ButtonDownloadSection">Download Windows v2ray</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src='https://cdn.glitch.global/8352fc0e-bebe-4680-ae0b-269da8b54259/ScrollSmoother.min.js'></script>
+    <script src="https://cdn.glitch.global/8352fc0e-bebe-4680-ae0b-269da8b54259/SplitText.min.js"></script>
+    <script src='https://cdn.glitch.global/8352fc0e-bebe-4680-ae0b-269da8b54259/CSSRulePlugin.min.js'></script>
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
